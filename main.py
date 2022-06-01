@@ -155,6 +155,7 @@ for i in range(10):
         counting -= 1
         print(array1)
 
+
 def Hor_test(letter,hor_locate,ver_locate):
     w1=0
     w2=1
