@@ -16,7 +16,7 @@ select2ndlist =[]
 '''
 
 #18x18 배열 생성 내부 " "로 지정
-array1 = np.full((18,18)," ", dtype=str)
+array1 = np.full((18,18)," ", dtype = str)
 
 #선택된 단어리스트(어떤 단어들이 사용됬는지 확인)
 aList = []
