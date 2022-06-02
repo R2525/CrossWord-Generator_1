@@ -14,6 +14,8 @@ c_2List = []
 select2ndlist =[]
 
 '''
+"와!"
+
 
 #18x18 배열 생성 내부 " "로 지정
 array1 = np.full((18,18)," ", dtype = str)
