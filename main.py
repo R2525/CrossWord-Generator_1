@@ -117,6 +117,23 @@ def WordPrinter():
         #print("xs", alphaPosition)
         nSt += 1
 '''
+#test
+def Hor_test(letter,hor_locate,ver_locate):
+    x=0
+    for i in letter:
+        if array1[ver_locate-1][hor_locate]==(" ")and array1[ver_locate+1][hor_locate] == (" "):
+            print("able")
+            if array1[ver_locate][hor_locate+1] != (" "):
+                x+=1
+                print("앞 존재")
+            elif x>=2:
+                pass
+
+        else:
+            pass
+
+
+
 #단어의 좌표 계산 밑
 #필요한 요소 [단어 시작 좌표 리스트 ,랜덤 숫자(cList),frontWord[]
 nSt =0          #실행 횟수(수직 수평 돌아가면서 실핼)
@@ -133,7 +150,7 @@ counting = 10
 #for i in letterList:
 for i in range(10):
     if(counting % 2 == 0):
-
+        #Hor_test(letterList2[-1],p_X[-1],p_Y[-1])
         Hor_change(letterList2[-1], p_X[-1], p_Y[-1])
         alphaPosition[0].append(cList[-1])
         p_X.append(p_X[-1]+cList[-1]-1)
@@ -158,19 +175,7 @@ for i in range(10):
         print(array1)
 
 
-def Hor_test(letter,hor_locate,ver_locate):
-    w1=0
-    w2=1
-    for i in letter:
-        #if array1.data is " ":
 
-        y = letter[slice(w1, w2)]
-        w1 += 1
-        w2 += 1
-        array1[ver_locate, hor_locate] = y
-        hor_locate += 1
-
-    AlphaSelect(letter)
 
 print("단어들aList",aList)
 print("랜덤 숫자cList",cList)
