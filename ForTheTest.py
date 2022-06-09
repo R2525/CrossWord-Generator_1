@@ -212,7 +212,7 @@ def ckeckRoutine(letter, hor_locate, ver_locate):
         letterList2.append(selectedWord)
         count =+1
     else:
-        print("----------------not ready-------------------")
+        print("----------------not ready--------------------")
         needcount =0
         print(letter)
         ckeckRoutine(selectedWord, X, Y)
