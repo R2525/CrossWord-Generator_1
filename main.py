@@ -306,10 +306,3 @@ for i in range(10):
     print(i)
 
 
-
-class SomeClass:
-    def __init__(self, something):
-        self.something = something
-
-    def some_function(self):
-        print(self.something)
