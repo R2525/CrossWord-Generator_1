@@ -31,7 +31,22 @@ array2 = np.full((18,18)," ")
 #선택된 단어리스트(어떤 단어들이 사용됬는지 확인)
 aList = ["aab"]
 
-
+array1[4,9] = "c"
+array1[4,10]= "r"
+array1[4,11]= "o"
+array1[4,12]= "s"
+array1[4,13]= "s"
+array1[5,12]= "y"
+array1[6,12]= "s"
+array1[7,12]= "t"
+array1[8,12]= "e"
+array1[9,12]= "m"
+array2[0,0] = "!"
+array2[0,3] ="!"
+array2[2,5] ="!"
+array1[2,3] ="e"
+array1[2,4] ="r"
+array1[2,6] ="d"
 for t in range(18):
     array1[0][t] = t
     array1[t][0] = t
@@ -109,7 +124,7 @@ def Select2ndFunc(alpha):
 
 
 
-def WordReader_H(letter, hor_locate, ver_locate):
+'''def WordReader_H(letter, hor_locate, ver_locate):
     existcount = 0
     able =0
     global tryednum
@@ -138,22 +153,57 @@ def WordReader_H(letter, hor_locate, ver_locate):
                 break
             else:
                 cando.append(0)
-        '''else:
+        else:
             cando.append(1)
             #Select2ndFunc()
             AlphaSelect(letter)
-            break'''
+            break
         hor_locate += 1
-    '''if able == 1:
+    if able == 1:
         cando.append(1)
     else:
-        cando.append(0)'''
+        cando.append(0)
 
     print("try", tryednum)
     print("head", array1[p_Y[-1], p_X[-1] - 1], "tail", array1[p_Y[-1], p_X[-1] + len(letter)])
     print(p_X[-1], p_Y[-1])
     print("found1", foundAlpha)
-    # foundAlpha.clear()
+    # foundAlpha.clear()'''
+
+
+def WordReader_H(letter, hor_locate, ver_locate):
+    existcount = 0
+    print(array2)
+    print(array1)
+    print("X", p_X)
+    print("Y", p_Y)
+    global needcount
+    if array2[ver_locate,hor_locate-1]=='!'   or array2[ver_locate,hor_locate-1] =='x' or array2[ver_locate, hor_locate +len(letter)] == "!" or array2[ver_locate, hor_locate +len(letter)] == "x":
+        able =1
+        print("2.1")
+        return 1
+    for x in letter:
+        if "!" not in array2[ver_locate,hor_locate]:
+            foundAlpha.append(array1[ver_locate, hor_locate])
+            print(foundAlpha)
+            a = "".join(foundAlpha)
+            print(a)
+            hor_locate += 1
+            able = 0
+        elif "!" in array2[ver_locate,hor_locate]:
+            able =1
+            print("x")
+            foundAlpha.clear()
+            return 0
+    print("o3.1")
+    needcount += 1
+
+WordReader_H()
+print(array1)
+print(array2)
+
+
+
 def WordReader_V(letter,hor_locate,ver_locate):
     #or 'x' in array2[ver_locate - 1 - len(letter), hor_locate]
     existcount =0
@@ -236,7 +286,7 @@ def position_Calculator(letter):
     print("count",count)
     print("가능성",cando)
 
-
+'''
 movenext =0
 for i in range(10):
     print("count", count)
@@ -296,10 +346,4 @@ for i in range(10):
     print(array1)
     print(array2)
     print(i)
-
-class SomeClass:
-    def __init__(self,something):
-        self.something = something
-
-    def some_function(self):
-        print(self.something)
+'''
