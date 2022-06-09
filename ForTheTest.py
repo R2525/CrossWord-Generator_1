@@ -140,6 +140,6 @@ class SomeClass:
         print(self)
 
 
-a = SomeClass("some_value")
+a = SomeClass("some_fvalue")
 a.some_function()
 
