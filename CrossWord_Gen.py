@@ -257,6 +257,7 @@ def making_test(test_array):
                 test_array[x, y] = " "
     return test_array
 
+
 # 단어 의미의 길이가 길어서 세미콜론(;) 두 번째에서 끊기
 def making_test_meaning():
     number = 0
